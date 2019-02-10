@@ -1,0 +1,24 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>Revista VEJA</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<form (ngSubmit)="login()">
+		<ion-list inset>
+
+			<ion-item>
+				<ion-input [(ngModel)]='email' type="text" placeholder="Email" name="email"></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-input [(ngModel)]='password' type="password" placeholder="Password" name="password"></ion-input>
+			</ion-item>
+
+			<button ion-button type="submit" block>Login</button>
+
+		</ion-list>
+	</form>
+
+</ion-content>
