@@ -5,25 +5,14 @@
   </ion-header>
 
 <ion-content>
-  <ion-list>
+  <ion-list *ngFor="let magazine of magazineList">
     <ion-item>
-      <ion-label>Pokémon Yellow</ion-label>
-      <button ion-button type="submit" block>Comprar</button>
-    </ion-item>
-    <ion-item>
-      <ion-label>Mega Man X</ion-label>
-      <button ion-button type="submit" block>Comprar</button>
-    </ion-item>
-    <ion-item>
-      <ion-label>The Legend of Zelda</ion-label>
-      <button ion-button type="submit" block>Comprar</button>
-    </ion-item>
-    <ion-item>
-      <ion-label>Pac-Man</ion-label>
-      <button ion-button type="submit" block>Comprar</button>
-    </ion-item>
-    <ion-item>
-      <ion-label>Super Mario World</ion-label>
+      <ion-img style="width:60px" [src]="magazine.cover"></ion-img>
+      <ion-label>
+        {{ magazine.edition }}<br/>
+        {{ magazine.date }}<br/>
+        R$ {{ magazine.value }}
+      </ion-label>
       <button ion-button type="submit" block>Comprar</button>
     </ion-item>
   </ion-list>

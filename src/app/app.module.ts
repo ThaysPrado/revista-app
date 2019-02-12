@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AuthService } from '../services/auth.service';
+import { MagazineService } from '../services/magazine.service';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { AuthService } from '../services/auth.service';
     SplashScreen,
     AngularFireAuth,
     AuthService,
+    MagazineService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

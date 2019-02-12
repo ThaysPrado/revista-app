@@ -29,7 +29,7 @@ export class LoginPage {
 		this.auth.signInWithEmail(credentials)
 			.then(
 				() => this.navCtrl.navigateRoot('home')
-      );7138
+      );
     */
 	}
 
