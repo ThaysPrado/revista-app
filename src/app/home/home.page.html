@@ -1,19 +1,22 @@
-<ion-header>
-    <ion-toolbar>
-      <ion-title>Revista VEJA</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-header style="margin-bottom:15px">
+  <ion-toolbar>
+    <ion-title>Revista VEJA</ion-title>
+  </ion-toolbar>
+</ion-header>
 
 <ion-content>
-  <ion-list *ngFor="let magazine of magazineList">
+  <ion-list class="box-list" *ngFor="let magazine of magazineList">
     <ion-item>
-      <ion-img style="width:60px" [src]="magazine.cover"></ion-img>
+      <ion-img [src]="magazine.cover" style="width:70px;height: 92px;"></ion-img>
       <ion-label>
         {{ magazine.edition }}<br/>
         {{ magazine.date }}<br/>
-        R$ {{ magazine.value }}
+        <span>R$ {{ magazine.value }}</span>
       </ion-label>
-      <button ion-button type="submit" block>Comprar</button>
+      <div class="container-button">
+        <button ion-button type="submit" block class="button-action">Comprar</button>
+        <button ion-button type="submit" block class="button-action">Assinar</button>
+      </div>
     </ion-item>
   </ion-list>
   <!--<iframe src="/assets/aframe-ar.html"></iframe>-->
