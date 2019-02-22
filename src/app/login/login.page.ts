@@ -20,17 +20,17 @@ export class LoginPage {
   
 
   login() {
-    this.navCtrl.navigateRoot('/home')
-    /*
+    //this.navCtrl.navigateRoot('/home')
+    
 		let credentials = {
 			email: this.email,
 			password: this.password
 		};
 		this.auth.signInWithEmail(credentials)
 			.then(
-				() => this.navCtrl.navigateRoot('home')
+				() => this.navCtrl.navigateRoot('/home')
       );
-    */
+    
 	}
 
 }

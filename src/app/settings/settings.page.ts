@@ -28,4 +28,8 @@ export class SettingsPage {
 
   }
 
+  segmentChanged(ev: any) {
+    console.log('Segment changed', ev);
+  }
+
 }

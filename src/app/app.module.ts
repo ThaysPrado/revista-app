@@ -16,13 +16,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthService } from '../services/auth.service';
 import { MagazineService } from '../services/magazine.service';
 
+import { AuthGuard } from '../services/auth-guard.service';
+
 @NgModule({
   declarations: [
     AppComponent
   ],
   entryComponents: [],
   imports: [
-    AngularFireModule.initializeApp(firebaseConfig.fire),
+    AngularFireModule.initializeApp(firebaseConfig.fire),  
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
@@ -32,6 +34,7 @@ import { MagazineService } from '../services/magazine.service';
     SplashScreen,
     AngularFireAuth,
     AuthService,
+    AuthGuard,
     MagazineService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
