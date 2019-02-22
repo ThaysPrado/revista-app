@@ -20,8 +20,6 @@ export class LoginPage {
   
 
   login() {
-    //this.navCtrl.navigateRoot('/home')
-    
 		let credentials = {
 			email: this.email,
 			password: this.password
@@ -30,7 +28,6 @@ export class LoginPage {
 			.then(
 				() => this.navCtrl.navigateRoot('/home')
       );
-    
 	}
 
 }

@@ -1,25 +1,36 @@
 <ion-header style="margin-bottom:15px">
   <ion-toolbar>
     <ion-title>Configuração VEJA</ion-title>
-    <ion-icon name="cog"></ion-icon>
+    <button ion-button icon-only (click) ="goToHome()">
+      OK
+    </button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-segment (ionChange)="segmentChanged($event)">
-    <ion-segment-button value="friends" checked>
+    <ion-segment-button value="conta" checked>
       <ion-label>Conta</ion-label>
     </ion-segment-button>
-    <ion-segment-button value="enemies">
+    <ion-segment-button value="prefer">
       <ion-label>Preferências</ion-label>
     </ion-segment-button>
   </ion-segment>
 
-  <ion-list class="box-list">
+  <ion-list class="box-list" *ngIf="!showPrefer">
     <ion-item>
       <div class="container-button">
-        <button ion-button type="submit" block class="button-action">Comprar</button>
-        <button ion-button type="submit" block class="button-action">Assinar</button>
+        <button ion-button type="submit" block class="button-action">3</button>
+        <button ion-button type="submit" block class="button-action">4</button>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <ion-list class="box-list" *ngIf="showPrefer">
+    <ion-item>
+      <div class="container-button">
+        <button ion-button type="submit" block class="button-action">1</button>
+        <button ion-button type="submit" block class="button-action">2</button>
       </div>
     </ion-item>
   </ion-list>

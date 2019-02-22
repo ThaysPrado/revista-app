@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { NavController } from '@ionic/angular';
 import { MagazineService } from '../../services/magazine.service';
 
 @Component({
@@ -20,12 +21,16 @@ export class HomePage {
 		}
   ];
 
-  constructor(private magazineService: MagazineService) {
+  constructor(private magazineService: MagazineService, private navCtrl: NavController) {
     this.magazineList = this.magazineService.listMagazine();
   }
 
   ngOnInit() {
 
+  }
+
+  goToSettings() {
+    this.navCtrl.navigateRoot('/settings');
   }
 
 }

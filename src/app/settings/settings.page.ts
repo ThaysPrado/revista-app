@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { NavController } from '@ionic/angular';
 import { MagazineService } from '../../services/magazine.service';
 
 @Component({
@@ -8,6 +9,8 @@ import { MagazineService } from '../../services/magazine.service';
   styleUrls: ['settings.page.scss'],
 })
 export class SettingsPage {
+
+  showPrefer = false;
 
   magazineList = [
     {
@@ -20,7 +23,7 @@ export class SettingsPage {
 		}
   ];
 
-  constructor(private magazineService: MagazineService) {
+  constructor(private magazineService: MagazineService, private navCtrl: NavController) {
     this.magazineList = this.magazineService.listMagazine();
   }
 
@@ -29,7 +32,15 @@ export class SettingsPage {
   }
 
   segmentChanged(ev: any) {
-    console.log('Segment changed', ev);
+    if (ev['detail']['value'] === 'conta') {
+      this.showPrefer = false;
+    } else {
+      this.showPrefer = true;
+    }
+  }
+
+  goToHome() {
+    this.navCtrl.navigateRoot('/home');
   }
 
 }
