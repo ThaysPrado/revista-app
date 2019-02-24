@@ -1,9 +1,11 @@
 <ion-header style="margin-bottom:15px">
   <ion-toolbar>
-    <ion-title>Revista VEJA</ion-title>
-    <button ion-button icon-only (click) ="goToSettings()">
-      <ion-icon name="cog"></ion-icon>
-    </button>
+    <ion-buttons>
+      <ion-title class="central">Revista VEJA</ion-title>
+      <button class="background-white" ion-button icon-only (click) ="goToSettings()">
+        <ion-icon class="icon" name="cog"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -16,9 +18,14 @@
         {{ magazine.date }}<br/>
         <span>R$ {{ magazine.value }}</span>
       </ion-label>
-      <div class="container-button">
-        <button ion-button type="submit" block class="button-action">Comprar</button>
-        <button ion-button type="submit" block class="button-action">Assinar</button>
+      <div class="container-button" *ngIf="!magazine.bought">
+        <button ion-button type="button" block class="button-action">Comprar</button>
+        <button ion-button type="button" block class="button-action">Assinar</button>
+      </div>
+      <div class="container-button" *ngIf="magazine.bought">
+        <button ion-button type="button" block class="button-action" (click)="goToMagazinePage()">
+          Visualizar
+        </button>
       </div>
     </ion-item>
   </ion-list>
@@ -26,7 +33,7 @@
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar>
+  <ion-toolbar class="box-footer">
     <ion-icon name="cart" style="font-size:30px"></ion-icon>
     <ion-title>Biblioteca</ion-title>
   </ion-toolbar>

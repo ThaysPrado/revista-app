@@ -1,0 +1,38 @@
+iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.box-image{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+}
+
+.background-white {
+    background-color: #fff;
+}
+
+.central{
+    padding: 0px 0px 0px 28%;
+}
+
+.box-footer {
+    padding: 0px 0px 0px 40%;
+    margin: 0px auto;
+    ion-icon{
+        padding: 0px 0px 0px 27px;
+        color: #4c8dff;
+    }
+    ion-title {
+        font-size: 14px;
+        color: #4c8dff;
+    }
+}
+
+.icon{
+    font-size: 20px;
+    color: #4c8dff;
+}

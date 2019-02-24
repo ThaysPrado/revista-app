@@ -33,4 +33,8 @@ export class HomePage {
     this.navCtrl.navigateRoot('/settings');
   }
 
+  goToMagazinePage() {
+    this.navCtrl.navigateRoot('/magazine');
+  }
+
 }

@@ -58,7 +58,7 @@ export class MagazineService {
 			edition: 'ed 2618',
 			date: '06/12/2018',
 			value: '14,90',
-			bought: false
+			bought: true
 		},
 		{
 			id: 7,

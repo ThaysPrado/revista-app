@@ -1,0 +1,21 @@
+<ion-header style="margin-bottom:15px">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-title class="central">Revista Veja - {{ magazine.edition }}</ion-title>
+      <button class="background-white" ion-button icon-only (click)="goBack()">
+        <ion-icon class="icon" name="cog"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img class="box-image" [src]="magazine.cover"></ion-img>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="box-footer">
+    <ion-icon name="cart" style="font-size:30px"></ion-icon>
+    <ion-title>Biblioteca</ion-title>
+  </ion-toolbar>
+</ion-footer>
