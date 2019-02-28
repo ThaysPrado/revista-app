@@ -41,13 +41,15 @@ iframe {
 }
 
 .central{
-    padding: 0px 0px 0px 33%;
+    text-align: center;
 }
 
 .button-text{
     font-size: 18px;
-    margin-top: 6px;
+    margin-top: 2px;
     color: #4c8dff;
+    position: absolute;
+    right: 0px;
 }
 
 .box-signature{

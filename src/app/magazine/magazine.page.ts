@@ -10,6 +10,13 @@ import { MagazineService } from '../../services/magazine.service';
 })
 export class MagazinePage {
 
+  slideOpts = {
+    effect: 'flip'
+  };
+
+  page = '../../assets/pages/Prancheta 8.png';
+  logo = '../../assets/logo-vr.png';
+
   magazine = {
       id: 6,
 			cover: '../../assets/covers/cover-7.jpg',
@@ -17,10 +24,9 @@ export class MagazinePage {
 			date: '06/12/2018',
 			value: '14,90',
 			bought: true
-		};
+    };
 
   constructor(private magazineService: MagazineService, private navCtrl: NavController) {
-    //this.magazine = this.magazineService.getMagazine(1);
   }
 
   ngOnInit() {
@@ -29,6 +35,10 @@ export class MagazinePage {
 
   goBack(){
     this.navCtrl.navigateRoot('/home');
+  }
+
+  goToVR() {
+    this.navCtrl.navigateRoot('/vr');
   }
 
 }

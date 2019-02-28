@@ -2,15 +2,25 @@
   <ion-toolbar>
     <ion-buttons>
       <ion-title class="central">Revista Veja - {{ magazine.edition }}</ion-title>
-      <button class="background-white" ion-button icon-only (click)="goBack()">
-        <ion-icon class="icon" name="cog"></ion-icon>
+      <button class="background-white button-text" ion-button icon-only (click)="goBack()">
+        Voltar
       </button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-img class="box-image" [src]="magazine.cover"></ion-img>
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <ion-img class="box-image" style="width: 80%;margin-top: 20px;" [src]="magazine.cover"></ion-img>
+    </ion-slide>
+    <ion-slide>
+      <button class="logo" ion-button icon-only (click)="goToVR()">
+        <ion-img [src]="logo" style="width:40px;height:40px;"></ion-img>
+      </button>
+      <ion-img class="box-image"  style="width: 80%;margin-top: 20px;" [src]="page"></ion-img>
+    </ion-slide>
+  </ion-slides>
 </ion-content>
 
 <ion-footer>

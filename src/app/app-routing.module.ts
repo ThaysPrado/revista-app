@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'home', loadChildren: './home/home.module#HomePageModule', canActivate: [AuthGuard]},
   { path: 'magazine', loadChildren: './magazine/magazine.module#MagazinePageModule', canActivate: [AuthGuard]},
   { path: 'settings', loadChildren: './settings/settings.module#SettingsPageModule', canActivate: [AuthGuard]},
+  { path: 'vr', loadChildren: './vr/vr.module#VRPageModule', canActivate: [AuthGuard]},
 ];
 
 @NgModule({

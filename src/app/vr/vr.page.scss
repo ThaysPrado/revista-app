@@ -9,9 +9,6 @@ iframe {
     display: flex;
     justify-content: center;
     padding: 0px 0px;
-    .swiper-pagination {
-        display: none !important;
-    }
 }
 
 .background-white {
@@ -53,8 +50,7 @@ iframe {
 
 .logo{
     position: absolute;
-    top: 12px;
-    left: 36px;
+    top: 0px;
+    left: -4px;
     background-color: transparent;
 }
-

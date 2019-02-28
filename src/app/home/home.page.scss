@@ -35,19 +35,27 @@ iframe {
 }
 
 .central{
-    padding: 0px 0px 0px 37%;
+    text-align: center;
+}
+
+.btn-options {
+    position: absolute;
+    right: 0px;
 }
 
 .box-footer {
-    padding: 0px 0px 0px 40%;
     margin: 0px auto;
     ion-icon{
-        padding: 0px 0px 0px 27px;
         color: #4c8dff;
+        font-size: 30px;
+        margin: 0px auto;
+        display: block;
+        padding: 0px;
     }
     ion-title {
         font-size: 14px;
         color: #4c8dff;
+        text-align: center;
     }
 }
 

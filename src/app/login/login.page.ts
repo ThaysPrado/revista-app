@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup , Validators , FormControl } from '@angular/forms';
 import { NavController } from '@ionic/angular';
 import { HomePage } from '../home/home.page';
 import { AuthService } from '../../services/auth.service';
@@ -10,13 +10,20 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['login.page.scss'],
 })
 export class LoginPage {
+
+	myGroup: FormGroup;
+
   email: string = ''
   password: string = ''
 
-	constructor(
-		private navCtrl: NavController,
-		private auth: AuthService,
-	) { }
+	constructor(private navCtrl: NavController,
+							private auth: AuthService,
+							private formBuilder: FormBuilder) {
+		this.myGroup = this.formBuilder.group({
+			email:  new FormControl('',[]),
+			password: new FormControl('', [])
+	 	});
+	}
   
 
   login() {
