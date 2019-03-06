@@ -1,5 +1,7 @@
 {
   "name": "ionic-revista",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

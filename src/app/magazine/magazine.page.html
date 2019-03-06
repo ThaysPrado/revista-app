@@ -10,22 +10,22 @@
 </ion-header>
 
 <ion-content>
-  <ion-slides pager="true" [options]="slideOpts">
+  <ion-slides pager="false" [options]="slideOpts">
     <ion-slide>
-      <ion-img class="box-image" style="width: 80%;margin-top: 20px;" [src]="magazine.cover"></ion-img>
+      <ion-img class="box-image" style="margin-top: 20px;width: auto;height: 70vh;" [src]="magazine.cover"></ion-img>
     </ion-slide>
     <ion-slide>
       <button class="logo" ion-button icon-only (click)="goToVR()">
         <ion-img [src]="logo" style="width:40px;height:40px;"></ion-img>
       </button>
-      <ion-img class="box-image"  style="width: 80%;margin-top: 20px;" [src]="page"></ion-img>
+      <ion-img class="box-image"  style="margin-top: 20px;width: auto;height: 70vh;" [src]="page"></ion-img>
     </ion-slide>
   </ion-slides>
 </ion-content>
 
 <ion-footer>
   <ion-toolbar class="box-footer">
-    <ion-icon name="cart" style="font-size:30px"></ion-icon>
+    <ion-icon name="cart" style="font-size:25px"></ion-icon>
     <ion-title>Biblioteca</ion-title>
   </ion-toolbar>
 </ion-footer>

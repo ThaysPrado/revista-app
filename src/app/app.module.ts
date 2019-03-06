@@ -39,7 +39,7 @@ import { AuthGuard } from '../services/auth-guard.service';
     AuthService,
     AuthGuard,
     MagazineService,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ],
   bootstrap: [AppComponent]
 })

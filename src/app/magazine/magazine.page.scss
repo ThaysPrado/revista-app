@@ -58,3 +58,10 @@ iframe {
     background-color: transparent;
 }
 
+ion-slide{
+    .swiper-pagination{
+        .swiper-pagination-bullet{
+            display: none;
+        }
+    }
+}
